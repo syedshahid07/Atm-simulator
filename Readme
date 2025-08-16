@@ -31,8 +31,10 @@ atm-simulator-mysql/
 ├── lib/
 │ └── mysql-connector-j-9.4.0.jar
 │
-├── db/
-│ └── atm.sql # Database schema & sample data
+├── db/   
+#compiling the program-javac -cp "lib/mysql-connector-j-9.4.0.jar;src" src/*.java -d out
+#run the code-java -cp "lib/mysql-connector-j-9.4.0.jar;out" Main
+│ └── atm.sql # Database schema & sample data  
 │
 ├── out/ # Compiled classes (after build)
 │
