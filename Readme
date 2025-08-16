@@ -1,0 +1,39 @@
+# 💳 ATM Simulator (Java + MySQL)
+
+This is a **Java-based ATM Simulator** project that uses **MySQL** as a backend database.  
+It allows users to log in with their **card number** and **PIN**, then perform ATM operations such as:
+
+- ✅ Login with card & PIN  
+- 💵 Deposit money  
+- 🏧 Withdraw money  
+- 📊 Check account balance  
+- 🧾 View mini statement  
+
+---
+
+## 🚀 Technologies Used
+- **Java 17+**
+- **MySQL 8+**
+- **JDBC (MySQL Connector 9.4.0)**
+
+---
+
+## 📂 Project Structure
+atm-simulator-mysql/
+│
+├── src/
+│ ├── Main.java
+│ ├── Account.java
+│ ├── ATMService.java
+│ ├── Menu.java
+│ └── DatabaseManager.java
+│
+├── lib/
+│ └── mysql-connector-j-9.4.0.jar
+│
+├── db/
+│ └── atm.sql # Database schema & sample data
+│
+├── out/ # Compiled classes (after build)
+│
+└── README.md
