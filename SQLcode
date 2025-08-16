@@ -1,0 +1,22 @@
+CREATE DATABASE atm_simulator;
+USE atm_simulator;
+
+CREATE TABLE accounts (
+  account_id INT PRIMARY KEY AUTO_INCREMENT,
+  card_number VARCHAR(20) UNIQUE NOT NULL,
+  pin VARCHAR(10) NOT NULL,
+  balance DECIMAL(15,2) NOT NULL
+);
+
+CREATE TABLE transactions (
+  tx_id INT PRIMARY KEY AUTO_INCREMENT,
+  account_id INT,
+  tx_type ENUM('deposit','withdraw','balance_inquiry') NOT NULL,
+  amount DECIMAL(15,2),
+  tx_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+);
+
+-- Add a sample user
+INSERT INTO accounts(card_number, pin, balance) VALUES
+('1234567890', '1234', 5000.00);
